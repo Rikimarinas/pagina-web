@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <title>Mi Página Web</title>
   <style>
+    /* Estilos para el contador */
     body {
       font-family: Arial, sans-serif;
       text-align: center;
@@ -14,6 +15,16 @@
       font-size: 16px;
       cursor: pointer;
     }
+    /* Estilos para el contador */
+    #visitCounter {
+      position: fixed;
+      bottom: 10px;
+      right: 10px;
+      background-color: #f1f1f1;
+      padding: 5px 10px;
+      border-radius: 5px;
+      font-size: 12px;
+    }
   </style>
 </head>
 <body>
@@ -21,7 +32,25 @@
   <p>Esta es una página web de ejemplo.</p>
   <button id="colorButton">Cambiar color</button>
 
+  <!-- Contador -->
+  <div id="visitCounter">Visitantes: <span id="counter">0</span></div>
+
   <script>
+    // Función para aumentar el contador
+    function incrementCounter() {
+      var counter = localStorage.getItem('visits');
+      counter = counter ? parseInt(counter) + 1 : 1;
+      localStorage.setItem('visits', counter);
+      document.getElementById('counter').innerText = counter;
+    }
+
+    // Al cargar la página, incrementa el contador y muestra el valor almacenado
+    window.onload = function() {
+      incrementCounter();
+      document.getElementById('counter').innerText = localStorage.getItem('visits') || '0';
+    };
+
+    // Resto del código...
     document.getElementById('colorButton').addEventListener('click', function() {
       document.body.style.backgroundColor = getRandomColor();
     });
@@ -37,3 +66,4 @@
   </script>
 </body>
 </html>
+
