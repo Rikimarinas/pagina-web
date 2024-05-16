@@ -1,0 +1,106 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #eaf5e1; /* Color de fondo verde claro */
+    color: #ffffff; /* Color de texto oscuro */
+    margin: 0;
+    padding: 0;
+    font-size: 20px; /* Tamaño de fuente base */
+}
+
+header {
+    background-color: #3dac42; /* Color de fondo verde */
+    padding: 20px; /* Ajuste del padding */
+    display: flex;
+    justify-content: space-between; /* Espaciado uniforme entre los elementos hijos */
+    align-items: center; /* Para centrar verticalmente los elementos */
+}
+
+header nav ul {
+    list-style-type: none;
+    margin: 0; /* Modificado el margen */
+    padding: 0;
+    display: flex; /* Para que los elementos de la lista se muestren en línea */
+}
+
+header nav ul li {
+    margin-right: 20px; /* Espacio entre los elementos de la lista */
+}
+
+header nav ul li:last-child {
+    margin-right: 0; /* Elimina el margen derecho del último elemento de la lista */
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos para el contenido principal */
+main {
+    padding: 20px;
+    text-align: center; /* Centra el contenido del main */
+}
+
+.contenedor-flex {
+    display: flex;
+    justify-content: space-between; /* Espaciado uniforme entre los elementos hijos */
+    align-items: center; /* Para centrar verticalmente los elementos */
+    flex-wrap: wrap; /* Envolver los elementos en caso de que no quepan en una sola fila */
+}
+
+.izquierda, .derecha {
+    flex: 1; /* Que cada elemento ocupe la misma cantidad de espacio */
+    padding: 20px;
+}
+
+.izquierda {
+    background-color: #55d479; /* Color de fondo para la sección izquierda */
+}
+
+.derecha {
+    background-color: #55d479; /* Color de fondo para la sección derecha */
+}
+
+/* Estilos para el carrusel */
+.carousel {
+    overflow: hidden; /* Ocultar el desbordamiento de las imágenes */
+    max-width: 90%; /* Establecer el ancho máximo del carrusel */
+    margin: 0 auto; /* Centrar el carrusel horizontalmente */
+}
+
+.carousel img {
+    width: 100%; /* Ajustar el ancho de la imagen al 100% del carrusel */
+    height: auto; /* Mantener la proporción de aspecto */
+    display: block; /* Mostrar la imagen como un bloque */
+    margin: 0 auto; /* Centrar la imagen horizontalmente */
+}
+
+/* Estilo para ocultar el scrollbar horizontal */
+body {
+    overflow-x: hidden;
+}
+
+/* Estilos para el pie de página */
+footer {
+    background-color: #3dac42; /* Color de fondo verde */
+    color: #ffffff; /* Color de texto blanco */
+    text-align: center; /* Centrar el contenido del pie de página */
+    padding: 20px;
+    font-size: 14px; /* Tamaño de fuente más pequeño */
+}
+
+/* Media query para dispositivos móviles */
+@media screen and (max-width: 600px) {
+    header nav ul {
+        margin: 5px; /* Modificado el margen */
+    }
+
+    header nav ul li {
+        margin-right: 10px; /* Espacio entre los elementos de la lista */
+    }
+}
